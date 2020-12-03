@@ -35,6 +35,8 @@ void wakeup(int sexo)
     if (sexo == VARON)
     {
         Request *pr = (Request *)GetObj(c->qVarones);
+        if (pr == NULL)
+            return;
         if (c->damas == 0 && pr != NULL)
         {
             pr->ready = TRUE;
@@ -49,6 +51,8 @@ void wakeup(int sexo)
     else if (sexo == DAMA)
     {
         Request *pr = (Request *)GetObj(c->qDamas);
+        if (pr == NULL)
+            return;
         if (c->varones == 0 && pr != NULL)
         {
             pr->ready = TRUE;
