@@ -122,15 +122,11 @@ if sock_udp is None:
     sys.exit(1)
 print("Conectado a proxy 2")
 
-first = True
 while True:
     conn, addr = sock_tcp.accept()
     while True:
-        if(first):
-            proxy(conn, sock_udp)
-        else:
-            aux(conn, sock_udp)
-        first = False
+        proxy(conn, sock_udp)
         break
     conn.close()
+
 # py client_echo3.py localhost 1818
