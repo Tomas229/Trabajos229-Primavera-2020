@@ -1,0 +1,7 @@
+Erratas
+Errata: En el shell 3, cuando se ejecuta el primer comando echo, debería aparecer el $ de inmediato para indicar que echo termina.  Es decir debería aparecer:
+
+$ echo 10 >/dev/cdown
+$
+
+En buenas cuentas, sus implementaciones para read y write nunca deben esperar a que ocurra algún evento.  Solo necesitan garantizar la exclusión mutua con down y up.  No necesitan usar down_interruptible.
