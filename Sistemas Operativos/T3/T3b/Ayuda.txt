@@ -1,0 +1,16 @@
+Ayuda para implementar los timeouts
+
+El primer problema que tienen que resolver es que cuando se suspende nCombineOxy con timeout,
+ si se arma la molécula antes del timeout, entonces tienen que cancelar el timeout llamando a CancelTask
+ en la llamada a nCombineHydro que armó la molécula. Por eso es importante que distingan 2 estados al suspender 
+nCombineOxy: espera con o sin timeout. En nCombineHydro si la tarea que aportó el oxígeno está en el estado de espera 
+con timeout, invocan CancelTask, si no, no.
+
+El segundo problema es que si se vence el timeout en nCombineOxy, 
+tienen que sacar esa tarea de la cola de tareas con oxígeno. 
+El tema es como distinguir después de Resume si se despertó porque se armó la molécula o si se venció el timeout. 
+Mi propuesta es que agreguen un campo para la molécula en el descriptor de tarea. 
+Al inicio de nCombineOxy colóquenlo en NULL. En nCombineHydro si arman la molécula, 
+colóquen la molécula en el descriptor de tarea del thread con el oxígeno. 
+En nCombineOxy, en el retorno de Resume, si el campo para la molécula continúa en NULL es porque se venció el timeout 
+( entonces saquen la tarea de la cola de tareas con oxígeno), si no, es porque se armó la molécula.
