@@ -1,6 +1,6 @@
 #include <nSystem.h>
 #include "nSysimp.h"
-
+//Pasa todos los test
 // Encabezados para la cola de prioridades
 
 typedef struct priqueue *PriQueue;
@@ -16,6 +16,7 @@ int PriLength(PriQueue pq);
 // Defina aca el tipo struct subasta
 // El typedef struct subasta *nSubasta esta en nSystem.h
 
+//Pasa todos los test
 struct subasta
 {
   PriQueue c; // cola de prioridades

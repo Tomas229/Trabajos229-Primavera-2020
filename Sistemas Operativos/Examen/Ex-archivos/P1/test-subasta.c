@@ -106,7 +106,6 @@ int test1(int print_msg) {
   if (nWaitTask(pepe))
     nFatalError("test1", "pepe debio perder con 2\n");
   int u;
-  nSleep(2000);
   int recaud= adjudicar(s, &u);
   if (recaud!=7)
     nFatalError("test1", "La recaudacion debio ser 7 y no %d\n", recaud);
@@ -144,7 +143,6 @@ int test2(int print_msg) {
   if (nWaitTask(ximena))
     nFatalError("nMain", "ximena debio perder con 4\n");
   int u;
-  nSleep(2000);
   int recaud= adjudicar(s, &u);
   if (recaud!=18)
     nFatalError("test1", "La recaudacion debio ser 7 y no %d\n", recaud);
@@ -187,7 +185,7 @@ int test3(int print_msg) {
 }
 
 #define N 30
-#define M 200
+#define M 20000
 
 int nMain() {
   t_mon= nMakeMonitor();
@@ -214,8 +212,6 @@ int nMain() {
   nTask *tasks1= nMalloc(M*sizeof(nTask));
   nTask *tasks2= nMalloc(M*sizeof(nTask));
   nTask *tasks3= nMalloc(M*sizeof(nTask));
-  if (tasks1==NULL || tasks2==NULL || tasks3==NULL)
-    nFatalError("nMain", "Se acabo la memoria\n");
   int k;
   for (k=1; k<N; k++) {
     tasks1[k]= nEmitTask(test1, 0);

@@ -2,11 +2,7 @@
 
 #include "subasta.h"
 
-//typedef struct
-//{ PriQueue c; // cola de prioridades
-//  int n;      // número de unidades
-//  SpinLock m; // Exclusión mutua subasta
-//} * Subasta;
+//Pasa todos los test
 
 struct subasta
 {

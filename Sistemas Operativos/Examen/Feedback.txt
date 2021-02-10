@@ -1,0 +1,11 @@
+Nota: 68
+P1: 70
+P2: 70
+P3: 64
+	a) 1.2/1.2 
+	b) 1.2/1.2 
+	c) 0.6/1.2 
+	WS se lleva el proceso completo a disco, no tiene sentido dado que es el único proceso. 
+	Reloj se lleva las páginas en desuso. 
+	d) 1.2/1.2 
+	e) 1.2/1.2
