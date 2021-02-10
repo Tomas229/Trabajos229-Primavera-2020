@@ -1,0 +1,21 @@
+#include "nSystem.h"
+#include "nSysimp.h"
+#include "fifoqueues.h"
+
+... declare variables globales ...
+
+void H2oInit() {
+  ... función de inicializacion ...
+  ... invoque esta funcion desde nMain.c ...
+}
+
+
+// Esta funcion es invocada desde testh2o.c
+nH2o nCombineOxy(void *oxy, int timeout) {
+  return ...;
+}
+
+// Esta funcion es invocada desde testh2o.c
+nH2o nCombineHydro(void *hydro) {
+  return ...;
+}
