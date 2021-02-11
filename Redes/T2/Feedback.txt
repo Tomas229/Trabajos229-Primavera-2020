@@ -1,0 +1,5 @@
+P1: 7.0
+P2: 4.0
+Mensaje Personal:
+P2 1: -2: Sin el proxy es más eficiente porque el proxy usa stop & wait; 
+P2 3: -1: Stop & wait es ineficiente en cualquier caso debido al delay, lo importante es usar ventanas

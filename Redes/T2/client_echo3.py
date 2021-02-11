@@ -2,21 +2,18 @@
 # Echo client program
 # Version con dos threads: uno lee de stdin hacia el socket y el otro al revés
 import jsockets
-import sys
-import threading
+import sys, threading
 import time
-
 
 def Rdr(s):
     while True:
         try:
-            data = s.recv(1500).decode()
+            data=s.recv(1500).decode()
         except:
             data = None
-        if not data:
+        if not data: 
             break
-        print(data, end='', flush=True)
-
+        print(data, end = '')
 
 if len(sys.argv) != 3:
     print('Use: '+sys.argv[0]+' host port')
@@ -37,3 +34,4 @@ for line in sys.stdin:
 
 time.sleep(3)  # dar tiempo para que vuelva la respuesta
 s.close()
+

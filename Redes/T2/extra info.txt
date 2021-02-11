@@ -1,0 +1,13 @@
+(OJO: Se me olvidó explicitar en la tarea2: el máximo de bytes que puede llevar el mensaje UDP entre los dos proxies es de 
+1.500 bytes en total. ¡El HEADER de 2 bytes que llevan los datos también ocupa parte del largo máximo del mensaje!)
+
+Se trata de agregar un protocolo de Stop and Wait para verificación de errores entre los proxies UDP. 
+El servidor (proxy2) lo proveemos nosotros esta vez, y corre en anakena.dcc.uchile.cl puerto UDP/1818
+
+Uds deben entregar el código de proxy1 y las respuestas a las preguntas incluidas
+
+Una explicación de cómo mirar el protocolo a mano con el servidor está en: https://drive.google.com/file/d/1bD3WnHV5dJuDrqXr8uDu5xiNYdeApNAs/view
+
+Les anexo también nuevo código del cliente de eco (client_echo3.py) que es más agresivo y sobrevive a pérdidas.
+
+Les anexo también nueva implementación del proxy clásico de los ejemplos de jsockets, pero usando threads. Les puede servir de inspiración para esta tarea. proxy-threads.py 
