@@ -1,0 +1,11 @@
+P1: 2.0
+P2: 0.8
+P3: 1.0
+P4: 1.0
+Mensaje Personal:
+P2 -0.2 el último datagrama tiene payload 168. 
+P4 
+a) -0.75 uno de los principales problemas es como se comunicarán 2 dispositivos, 
+ya que uno debe saber la MAC de otro (o debe tener alguna forma de saberlo),
+lo que lleva a una tabla enorme con todas las direcciones MAC (muy poco eficiente). 
+b) -0.3 que implica que el mensaje no llegue completo ?

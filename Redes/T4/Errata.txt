@@ -1,0 +1,1 @@
+Corrección: En la P3, YouTube tiene el prefijo 208.65.152.0/22 y no 208.65.153.0/22.
