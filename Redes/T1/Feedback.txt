@@ -1,0 +1,7 @@
+P1: 7.0
+P2: 5.0
+Mensaje Personal:
+P2 1: -1: El cliente de eco no necesariamente sigue funcionando 
+(podría quedarse pegado en su recv si el reenvío entero se pierde); 
+P2 3: -1 Además de threads, requiere una forma de identificar cada mensaje que pasa por los sockets UDP 
+(algo que sirva para que el proxy1 sepa a qué cliente pasarle las respuestas de los proxy2);
